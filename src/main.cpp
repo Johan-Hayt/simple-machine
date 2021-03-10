@@ -51,9 +51,9 @@ void cb_m(){
 
 void fct_Inicio(){
 
-  v.readpot();
+  /*v.readpot();
   r.readpot();
-  m.readpot();
+  m.readpot();*/
   Serial.println("Inicio");
 
   if(!(digitalRead(muletilla))){
