@@ -24,7 +24,7 @@ void cb_llenado();
 void cb_Mordaza();
 void cb_Resistencia();
 
-Entidad v(8,0),m(9,1),r(10,2);
+Entidad v(8,0,3000),m(9,1,2000),r(10,2,1500); //el tercer argumento corresponde al tiempo del pot
 
 
 
