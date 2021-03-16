@@ -22,7 +22,7 @@ void Entidad::begin(){
 
 void Entidad::readpot(){
 
-    this->timeMillis = map(analogRead(this->analog_pin),0,1023,0,3000);
+    this->timeMillis = map(analogRead(this->analog_pin),0,1023,0,2500);
 
 };
 
