@@ -3,10 +3,11 @@
 
 
 
-Entidad::Entidad(uint8_t digital_pin,uint8_t analog_pin){
+Entidad::Entidad(uint8_t digital_pin,uint8_t analog_pin, uint32_t tiempo){
 
     this->digital_pin = digital_pin;
-    this->analog_pin =  analog_pin;
+    this->analog_pin  =  analog_pin;
+    this->tiempo      = tiempo;
     this->state = 0;
     this->timeMillis = 0;
 };
@@ -22,7 +23,7 @@ void Entidad::begin(){
 
 void Entidad::readpot(){
 
-    this->timeMillis = map(analogRead(this->analog_pin),0,1023,0,2500);
+    this->timeMillis = map(analogRead(this->analog_pin),0,1023,0,this->tiempo);
 
 };
 
