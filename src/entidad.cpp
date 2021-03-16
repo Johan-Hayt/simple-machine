@@ -15,7 +15,7 @@ Entidad::Entidad(uint8_t digital_pin,uint8_t analog_pin, uint32_t tiempo){
 void Entidad::begin(){
 
     pinMode(this->digital_pin, OUTPUT);
-    this->timeMillis = map(analogRead(this->analog_pin),0,1023,0,3000);
+    this->timeMillis = map(analogRead(this->analog_pin),0,1023,0,this->tiempo);
     this->setState(0);
     digitalWrite(this->digital_pin,this->state);
 
